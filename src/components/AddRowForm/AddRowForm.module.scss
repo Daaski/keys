@@ -1,0 +1,30 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+  border: 1px solid #C9C9C9;
+  border-radius: 10px;
+  margin-top: 5%;
+  padding: 50px;
+}
+
+.fields {
+  max-width: 600px;
+  width: 450px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  & div:first-child {
+    width: 60%;
+  }
+  & div:last-child {
+    width: 30%;
+  }
+}
+
+
+.button {
+  max-width: 600px;
+  width: 450px;
+}
