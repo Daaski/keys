@@ -1,11 +1,11 @@
-// @ts-ignore
-import html2pdf from 'html2pdf.js';
+import {FC, forwardRef} from "react";
 
-import {IData} from "@/pages";
-import {ListItem} from "@/components/List/ListItem";
+import {IData} from "pages";
+import {ListItem} from "components/List/ListItem";
 import {Button} from "primereact/button";
 
 import scss from './List.module.scss'
+
 
 
 interface ListProps {
@@ -14,18 +14,14 @@ interface ListProps {
     handleDeleteAll: () => void
 }
 
-export const List = ({data, handleDelete, handleDeleteAll}: ListProps) => {
+// eslint-disable-next-line react/display-name
+export const List: FC<ListProps> = forwardRef(({data, handleDelete, handleDeleteAll}, ref) => {
 
     const saveAsPDF = () => {
-        const element = document.getElementById('forPdf');
-        if (!element) {
-            console.error('Элемент с ID "forPdf" не найден.');
-            return;
-        }
-
-        html2pdf()
-            .from(element)
-            .save('example.pdf');
+        // @ts-ignore
+        import('html2pdf.js').then((html2pdf) => {
+            html2pdf.default().from(document.getElementById('forPdf')).save()
+        });
     };
 
     if (!data) {
@@ -47,4 +43,4 @@ export const List = ({data, handleDelete, handleDeleteAll}: ListProps) => {
             </div>
         </div>
     )
-}
+})

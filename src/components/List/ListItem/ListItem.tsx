@@ -1,6 +1,6 @@
-import {IData} from "@/pages";
+import {IData} from "pages";
 import DeleteSvg from './svg/plus-svgrepo-com.svg'
-import {generateITF14BarcodeImage} from "@/helpers/generateBarCodeImage";
+import {generateITF14BarcodeImage} from "helpers/generateBarCodeImage";
 
 import scss from './List.module.scss'
 import Image from "next/image";

@@ -1,4 +1,4 @@
-import {FormValues} from "@/components/AddRowForm/types";
+import {FormValues} from "components/AddRowForm/types";
 
 
 export const AddRowFormValidate = (values: FormValues) => {

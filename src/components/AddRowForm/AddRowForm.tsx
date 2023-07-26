@@ -3,10 +3,10 @@ import {InputText} from "primereact/inputtext";
 import {useFormik} from "formik";
 import {Dispatch, SetStateAction} from "react";
 
-import {IData} from "@/pages";
-import {FormValues} from "@/components/AddRowForm/types";
-import {AddRowFormValidate} from "@/components/AddRowForm/AddRowForm.utils";
-import {generateRandomITF14Code} from "@/helpers/generateITF-14Code";
+import {IData} from "pages";
+import {FormValues} from "components/AddRowForm/types";
+import {AddRowFormValidate} from "components/AddRowForm/AddRowForm.utils";
+import {generateRandomITF14Code} from "helpers/generateITF-14Code";
 
 import scss from './AddRowForm.module.scss'
 
