@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import {List} from "components/List";
 import {AddRowForm} from "components/AddRowForm/AddRowForm";
 
-import scss from '@/styles/Home.module.scss'
+import scss from 'styles/Home.module.scss'
 
 export interface IData {
     id: number,
