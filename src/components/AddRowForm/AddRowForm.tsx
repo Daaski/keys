@@ -25,6 +25,14 @@ export const AddRowForm = ({setData}: AddRowFormProps) => {
             arr.push({id: i, code: generateRandomITF14Code(), category: values.room})
         }
         setData( data => [...data ?? [], ...arr])
+        const localData = localStorage.getItem('data')
+
+        if (localData) {
+            const oldArr = JSON.parse(localData)
+            const newArr = [...oldArr, ...arr]
+            localStorage.setItem('data', JSON.stringify(newArr))
+            return
+        }
         localStorage.setItem('data', JSON.stringify(arr))
     }
 
